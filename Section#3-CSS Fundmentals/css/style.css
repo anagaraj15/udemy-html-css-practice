@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 5px solid #1098ad;
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+} */
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+/* p,
+li,
+h4 {
+  color: #444;
+} */
+
+.main-header {
+  padding: 20px 40px;
+  /* height: 80px; */
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+aside {
+  margin-bottom: 40px;
+  width: 500px;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+nav {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sec-header {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h3 {
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+ol,
+ul {
+  margin: 20px 50px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-size: 18px;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+#Copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.related-items {
+  list-style: none;
+  font-weight: bold;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: 30px;
+  display: inline-block;
+}
+
+a:link:last-child {
+  margin-right: 0;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: #2a11a5;
+}
+
+a:active {
+  color: #ed0a0a;
+}
+
+.likebtn {
+  font-size: 22px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+/*pseudo elelmts test start*/
+/*p::first-line {
+  color: #ed0a0a;
+}
+h2::first-letter,
+h3::first-letter {
+  color: #444;
+}*/
+/*pseudo elelmts test ends*/
+h2::after {
+  content: "TOP";
+  font-size: 16px;
+  color: #444;
+  background-color: #f6e959;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: inline-block;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+}

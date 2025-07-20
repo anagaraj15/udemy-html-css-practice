@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.product {
+  width: 825px;
+  margin: 50px auto;
+  border: 4px solid #000;
+}
+
+.product-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.product-title::before {
+  content: "SALE";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #f90606;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  left: -25px;
+}
+
+.price {
+  font-size: 24px;
+}
+
+.shipping {
+  text-transform: uppercase;
+  color: #777;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-desc {
+  margin-bottom: 10px;
+}
+
+a:link,
+a:visited {
+  color: #000;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.product-colors {
+  margin: 20px 0;
+}
+
+.product-color1 {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 10px;
+  background-color: #000;
+}
+
+.product-color2 {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 10px;
+  background-color: #2811f8;
+}
+
+.product-color3 {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 10px;
+  background-color: #f90606;
+}
+
+.product-color4 {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 10px;
+  background-color: #f8e511;
+}
+
+.product-color5 {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 10px;
+  background-color: #11f811;
+}
+
+.product-color6 {
+  display: inline-block;
+  padding: 15px;
+  background-color: #9f5112;
+}
+
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.details-list {
+  margin-left: 20px;
+  margin-top: 10px;
+  list-style: square;
+}
+
+.details-list li {
+  margin-bottom: 10px;
+}
+
+/* .details-list li:last-child {
+  margin-bottom: 0;
+} */
+
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-top: 4px solid #000;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000;
+}
+
+.btn:hover {
+  color: #000;
+  background-color: #fff;
+}
