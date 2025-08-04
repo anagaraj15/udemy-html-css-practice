@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel Component</title>
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /*
+      MAIN COLOR - #087f5b
+      GRAY COLOR - #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .carousel {
+        width: 800px;
+        margin: 100px auto;
+        position: relative;
+      }
+      .carousel-item {
+        /* display: flex; */
+        /* align-items: center;
+        justify-content: center; */
+        /* gap: 30px; */
+        background-color: #087f5b;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        border-radius: 5px;
+        /* position: relative; */
+        /* z-index: -1; */
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 30px;
+        position: relative;
+      }
+      img {
+        border-radius: 5px;
+        width: 250px;
+        height: 230px;
+        /* z-index: 1; */
+        /* align-self: flex-start; */
+        position: absolute;
+        top: -18px;
+        left: 24px;
+      }
+      .details {
+        color: #fff;
+        /* align-self: center; */
+        grid-column: 2;
+      }
+      .text {
+        margin-bottom: 40px;
+      }
+      .designation-text {
+        font-size: 12px;
+      }
+      .left-arrow {
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        stroke: #087f5b;
+        border-radius: 50%;
+        /* stroke-width: 20px; */
+        position: absolute;
+        top: 76px;
+        left: -20px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+      }
+      .right-arrow {
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        stroke: #087f5b;
+        border-radius: 50%;
+        /* stroke-width: 20px; */
+        position: absolute;
+        bottom: 90px;
+        right: -18px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+      }
+      .item-slider {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .item-slider span:first-child {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #087f5b;
+        background-color: #087f5b;
+      }
+      .item-slider span {
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; */
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #087f5b;
+      }
+      .items {
+        display: none;
+      }
+      .open {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-item">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="left-arrow"
+            onclick="LeftShiftFun()"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5 8.25 12l7.5-7.5"
+            />
+          </svg>
+        </div>
+        <div class="items open">
+          <img src="maria.jpg" alt="profile image" />
+          <div class="details">
+            <p class="text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
+              velit at, laudantium corrupti hic, saepe reprehenderit, eos
+              aliquid recusandae quam architecto officiis doloribus numquam
+              repellendus molestiae enim error similique praesentium.
+            </p>
+            <div class="designation-text">
+              <p>Maria De Almeda</p>
+              <p>Senior Product Manager at EDP Comercial</p>
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <img src="hero.jpg" alt="profile image" />
+          <div class="details">
+            <p class="text">
+              Mollitia tenetur rem voluptas eius fugit vel vitae illum. Incidunt
+              consequatur eligendi numquam suscipit cupiditate ea a. Officia
+              assumenda excepturi veniam unde debitis iste tenetur quae rem,
+              ipsam nulla?
+            </p>
+            <div class="designation-text">
+              <p>Katrina Kaif</p>
+              <p>Senior Project Manager at Bolywood Industry</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="right-arrow"
+            onclick="RightShiftFun()"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- <br />
+      <br /> -->
+      <div class="item-slider">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <script>
+      // <button onclick="myFunction()">Try it</button>;
+      function RightShiftFun() {
+        var element = document.getElementsByClassName("items");
+        element[1].classList.add("open");
+        element[0].classList.remove("open");
+      }
+      function LeftShiftFun() {
+        var element = document.getElementsByClassName("items");
+        element[0].classList.add("open");
+        element[1].classList.remove("open");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel Component</title>
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /*
+      MAIN COLOR - #087f5b
+      GRAY COLOR - #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .carousel {
+        width: 800px;
+        margin: 100px auto;
+        position: relative;
+      }
+      .carousel-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        background-color: #087f5b;
+        padding: 32px;
+        padding-left: 86px;
+        padding-right: 48px;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      img {
+        height: 200px;
+        width: 200px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transform: scale(1.5);
+      }
+      .testmonial {
+        padding-left: 48px;
+      }
+      .testmonial-text {
+        margin-bottom: 32px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #e6fcf5;
+      }
+      .testmonial-author {
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #c3fae8;
+      }
+      .testmonial-job {
+        font-size: 12px;
+        color: #c3fae8;
+      }
+      .btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+      }
+      .btn-left {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+      .btn-right {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+      .btn-icon {
+        width: 24px;
+        stroke: #087f5b;
+      }
+      .dots {
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px; */
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .dot-btn {
+        border: 2px solid #087f5b;
+        background-color: #fff;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .dot-btn:first-child {
+        background-color: #087f5b;
+      }
+      /* .carousel-item {
+        display: none;
+      }
+      .open {
+        display: block;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <!-- <div class="carousel-item"> -->
+      <div class="carousel-item open">
+        <img src="maria.jpg" alt="Profile image" />
+        <blockquote class="testmonial">
+          <p class="testmonial-text">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+            doloribus culpa? Error nemo veniam aperiam laudantium,
+            necessitatibus."
+          </p>
+          <p class="testmonial-author">Maria De Almedeia</p>
+          <p class="testmonial-job">Senior Product Manager at EDP Comercial</p>
+        </blockquote>
+      </div>
+      <div class="carousel-item">
+        <img src="hero.jpg" alt="Profile image" />
+        <blockquote class="testmonial">
+          <p class="testmonial-text">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+            doloribus culpa? Error nemo veniam aperiam laudantium,
+            necessitatibus."
+          </p>
+          <p class="testmonial-author">Jummy Roadriges</p>
+          <p class="testmonial-job">Senior Project Manager at BCCI Comercial</p>
+        </blockquote>
+      </div>
+      <div class="carousel-item">
+        <img src="mp_per_img.jpg" alt="Profile image" />
+        <blockquote class="testmonial">
+          <p class="testmonial-text">
+            "Lorem laudantium eos harum dolore quam debitis ipsum amet nemo
+            praesentium ab! Similique necessitatibus excepturi ab. Nihil
+            necessitatibus."
+          </p>
+          <p class="testmonial-author">Nagaraj Asundi</p>
+          <p class="testmonial-job">Senior Project Manager at BCCI Comercial</p>
+        </blockquote>
+      </div>
+      <div class="carousel-item">
+        <img src="hp-kaur.jpg" alt="Profile image" />
+        <blockquote class="testmonial">
+          <p class="testmonial-text">
+            Lorem repellendus adipisci inventore amet dolores fuga asperiores
+            delectus commodi eveniet eum odit quo enim animi maiores! Facere,
+            corrupti facilis. deserunt facere.
+          </p>
+          <p class="testmonial-author">Harman Preet Kaur</p>
+          <p class="testmonial-job">Senior Project Manager at BCCI Comercial</p>
+        </blockquote>
+      </div>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon LeftShift"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon RightShift"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <!-- </div> -->
+      <div class="dots">
+        <button class="dot-btn">&nbsp;</button>
+        <button class="dot-btn">&nbsp;</button>
+        <button class="dot-btn">&nbsp;</button>
+        <button class="dot-btn">&nbsp;</button>
+      </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="carousel.js"></script>
+
+    <!-- <script type="text/javascript">
+      // <button onclick="myFunction()">Try it</button>;
+      $(document).ready(function () {
+        var ele = document.getElementsByClassName("carousel-item");
+        document.getElementsByClassName("carousel-item").hide();
+        function RightShiftFun() {
+          var element = document.getElementsByClassName("carousel-item");
+          element[1].classList.add("open");
+          element[0].classList.remove("open");
+        }
+        function LeftShiftFun() {
+          var element = document.getElementsByClassName("carousel-item");
+          element[0].classList.add("open");
+          element[1].classList.remove("open");
+        }
+      });
+    </script> -->
+  </body>
+</html>
